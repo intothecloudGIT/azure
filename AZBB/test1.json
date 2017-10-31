@@ -1,0 +1,41 @@
+{
+    "$schema": "https://raw.githubusercontent.com/mspnp/template-building-blocks/master/schemas/buildingBlocks.json",
+    "contentVersion": "1.0.0.0",
+    "parameters" : {
+      "buildingBlocks": {
+        "value": [
+          {
+            "type": "VirtualNetwork",
+            "settings":[
+                {
+                "name": "VNET-global",
+                 "addressPrefixes": [ "192.168.0.0/16"],
+                 "subnets": [ 
+                   {
+                    "name": "Infra-subnet", 
+                    "addressPrefix": "192.168.10.0/24"
+                   },
+                   {
+                     "name": "DNZ-subnet", 
+                     "addressPrefix": "192.168.11.0/24"
+                   },
+                   {
+                     "name": "MGT-subnet", 
+                     "addressPrefix": "192.168.12.0/24"
+                   },
+                   {
+                     "name": "BackEnd-subnet", 
+                     "addressPrefix": "192.168.13.0/24"
+                   }
+                            ]    
+              
+                }
+            ]
+         }
+
+
+
+        ]
+      }
+    }
+  }
